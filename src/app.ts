@@ -16,18 +16,18 @@ age = 30;
 
 // console.log(isOld);
 
-const add = (a: number, b: number = 1) => a + b;
+// const add = (a: number, b: number = 1) => a + b;
 
-const printOutput: (a: string | number) => void = (output) =>
-  console.log(output);
+// const printOutput: (a: string | number) => void = (output) =>
+//   console.log(output);
 
-const button = document.querySelector("button");
+// const button = document.querySelector("button");
 
-if (button) {
-  button.addEventListener("click", (event) => console.log(event));
-}
+// if (button) {
+//   button.addEventListener("click", (event) => console.log(event));
+// }
 
-printOutput(add(5));
+// printOutput(add(5));
 
 const hobbies = ["Reading", "Puzzles"];
 const activeHobbies = ["Cooking"];
@@ -40,3 +40,12 @@ const person = {
 };
 
 const copiedPerson = { ...person };
+
+const add = (...numbers: number[]) => {
+    return numbers.reduce((curResult, curValue) => {
+        return curResult + curValue;
+    }, 0);
+};
+
+const addedNumbers = add(5, 10, 2, 3.7);
+console.log(addedNumbers);
